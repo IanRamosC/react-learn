@@ -1,23 +1,24 @@
 var data = [
-    {avatar_url: "https://avatars.githubusercontent.com/u/342471?v=3", html_url: "https://api.github.com/users/erkobridee", login: "erkobridee", name: "Erko Bridee" }
+    {
+    	avatar_url: "https://avatars.githubusercontent.com/u/342471?v=3"
+    , html_url: "https://api.github.com/users/erkobridee"
+    , login: "erkobridee"
+    , name: "Erko Bridee" }
 ];
 
 var MainApp = React.createClass({
-	getInitialState : function() {
-    return {data: {comments:[]}};
-	},
 	render: function () {
 		return (
 			<div>
-				<SearchForm />
+				<ProfileForm />
 				<h1>Github Profile</h1>
-				<GithubProfile data={this.props.data} />
+				<ProfileList />
 			</div>
 		);
 	}
 });
 
-var SearchForm = React.createClass({
+var ProfileForm = React.createClass({
 	render: function () {
 		return (
 			<form>
@@ -28,28 +29,28 @@ var SearchForm = React.createClass({
 	}
 });
 
-var GithubProfile = React.createClass({
+var ProfileList = React.createClass({
 	render: function () {
-		var profileNodes = this.props.data.map(function (profile) {
-  		return (
-	  		<GithubProfile>
-	  			<a href={profile.html_url}>
-						<img src={profile.avatar_url} title={profile.name} />
-						<span>{profile.login}</span>
-					</a>
-				</GithubProfile>
-  		);
-		});
-
 		return (
-			<div>
-				{profileNodes}
-			</div>
+			<div className="ProfileList">
+        <Profile name="Pete Hunt" html_url="test.html" avatar_url="teste.jpg" login="test_name" />
+      </div>
 		);
 	}
 });
 
+var Profile = React.createClass({
+  render: function() {
+    return (
+      <a href={this.props.html_url}>
+				<img src={this.props.avatar_url} title={this.props.name} />
+				<span>{this.props.login}</span>
+			</a>
+    );
+  }
+});
+
 React.render(
-	<MainApp data={data} />,
+	<MainApp />,
 	document.getElementById('profile')
 );
