@@ -1,0 +1,19 @@
+{
+  "name": "react-github",
+  "version": "0.0.1-alpha",
+  "description": "github api with react",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ianramosc/react-facebook.git"
+  },
+  "author": "Ian Ramos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ianramosc/react-facebook/issues"
+  },
+  "homepage": "https://github.com/ianramosc/react-facebook"
+}
