@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ianramosc/react-facebook.git"
+    "url": "https://github.com/ianramosc/react-github.git"
   },
   "author": "Ian Ramos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ianramosc/react-facebook/issues"
+    "url": "https://github.com/ianramosc/react-github/issues"
   },
-  "homepage": "https://github.com/ianramosc/react-facebook"
+  "homepage": "https://github.com/ianramosc/react-github"
 }
