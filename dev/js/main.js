@@ -1,50 +1,58 @@
+/** @jsx React.DOM */
 var data = [
-    {avatar_url: "https://avatars.githubusercontent.com/u/342471?v=3", html_url: "https://api.github.com/users/erkobridee", login: "erkobridee", name: "Erko Bridee" }
+    {
+      login: "ianramosc" 
+    ,  name: "Ian Ramos"
+    ,	avatar_url: "https://avatars.githubusercontent.com/u/5714212?v=3"
+    , html_url: "https://github.com/ianramosc"
+  	}
 ];
 
 var MainApp = React.createClass({
-	getInitialState : function() {
-    return {data: {comments:[]}};
-	},
 	render: function () {
 		return (
 			<div>
-				<SearchForm />
+				<ProfileForm />
 				<h1>Github Profile</h1>
-				<GithubProfile data={this.props.data} />
+				<ProfileList data={this.props.data} />
 			</div>
 		);
 	}
 });
 
-var SearchForm = React.createClass({
+var Profile = React.createClass({
+  render: function() {
+    return (
+      <a href={this.props.url}>
+				<img src={this.props.avatar} title={this.props.name} />
+				<span>{this.props.login}</span>
+			</a>
+    );
+  }
+});
+
+var ProfileList = React.createClass({
+	render: function () {
+		var profileNodes = this.props.data.map(function (profile) {
+			return (
+				<Profile name={profile.name} url={profile.html_url} avatar={profile.avatar_url} login={profile.login} />
+			);
+		});
+		return (
+			<div className="profileList">
+        {profileNodes}
+      </div>
+		);
+	}
+});
+
+var ProfileForm = React.createClass({
 	render: function () {
 		return (
 			<form>
 				<input type="text" placeholder="Username"/>
 				<button type="submit">Search</button>
 			</form>
-		);
-	}
-});
-
-var GithubProfile = React.createClass({
-	render: function () {
-		var profileNodes = this.props.data.map(function (profile) {
-  		return (
-	  		<GithubProfile>
-	  			<a href={profile.html_url}>
-						<img src={profile.avatar_url} title={profile.name} />
-						<span>{profile.login}</span>
-					</a>
-				</GithubProfile>
-  		);
-		});
-
-		return (
-			<div>
-				{profileNodes}
-			</div>
 		);
 	}
 });
