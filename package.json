@@ -4,6 +4,7 @@
   "description": "github api with react",
   "main": "index.html",
   "scripts": {
+    "start": "jsx --watch dev/js/ js; http-server"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/ianramosc/react-github/issues"
   },
-  "homepage": "https://github.com/ianramosc/react-github"
+  "homepage": "https://github.com/ianramosc/react-github",
+  "dependencies": {
+    "http-server": "^0.8.0",
+    "react-tools": "^0.13.3"
+  }
 }
