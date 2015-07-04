@@ -1,7 +1,7 @@
 {
-  "name": "react-github",
+  "name": "react-learn",
   "version": "0.0.1-alpha",
-  "description": "github api with react",
+  "description": "",
   "main": "index.html",
   "scripts": {
     "start": "jsx --watch dev/js/ js | http-server",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ianramosc/react-github.git"
+    "url": "https://github.com/ianramosc/react-learn.git"
   },
   "author": "Ian Ramos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ianramosc/react-github/issues"
+    "url": "https://github.com/ianramosc/react-learn/issues"
   },
-  "homepage": "https://github.com/ianramosc/react-github",
+  "homepage": "https://github.com/ianramosc/react-learn",
   "dependencies": {
     "http-server": "^0.8.0",
     "react-tools": "^0.13.3"
