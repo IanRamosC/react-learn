@@ -4,7 +4,7 @@
   "description": "github api with react",
   "main": "index.html",
   "scripts": {
-    "start": "jsx --watch dev/js/ js; http-server"
+    "start": "jsx --watch dev/js/ js | http-server"
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
